@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareLink - Social Forum</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="image.png" alt="CareLink Logo">
+                <div class="site-name">CareLink</div>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#health">Health</a>
+                <a href="#social">Social</a>
+                <a href="#services">Services</a>
+                <a href="#entertainment">Entertainment</a>
+            </div>
+            <button class="sos-button" id="sosButton">
+                <i class="fas fa-exclamation-circle"></i> SOS Emergency
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="social-section">
+            <h1><i class="fas fa-users"></i> Community Forum</h1>
+
+            <div class="forum-container">
+                <!-- Forum Categories -->
+                <div class="forum-categories">
+                    <button class="category-btn active" data-category="all">All Posts</button>
+                    <button class="category-btn" data-category="health">Health Discussions</button>
+                    <button class="category-btn" data-category="lifestyle">Lifestyle</button>
+                    <button class="category-btn" data-category="doctors">Ask Doctors</button>
+                    <button class="category-btn" data-category="social">Social Activities</button>
+                </div>
+
+                <!-- Create Post Section -->
+                <div class="create-post">
+                    <button id="newPostBtn" class="primary-btn">
+                        <i class="fas fa-plus"></i> Create New Post
+                    </button>
+                </div>
+
+                <!-- Post Creation Form (Hidden by default) -->
+                <div id="postForm" class="post-form" style="display: none;">
+                    <h3>Create New Post</h3>
+                    <form id="createPostForm">
+                        <div class="form-group">
+                            <label for="postTitle">Title:</label>
+                            <input type="text" id="postTitle" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="postCategory">Category:</label>
+                            <select id="postCategory" required>
+                                <option value="health">Health Discussion</option>
+                                <option value="lifestyle">Lifestyle</option>
+                                <option value="doctors">Ask Doctors</option>
+                                <option value="social">Social Activities</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="postContent">Content:</label>
+                            <textarea id="postContent" rows="4" required></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="submit-btn">Post</button>
+                            <button type="button" class="cancel-btn" id="cancelPost">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Posts List -->
+                <div class="posts-list" id="postsList">
+                    <!-- Posts will be dynamically added here -->
+                </div>
+            </div>
+
+            <!-- Add this after the forum-container div and before online-doctors div -->
+            <div class="calendar-section">
+                <h2><i class="fas fa-calendar-alt"></i> Health & Community Events</h2>
+                
+                <div class="calendar-container">
+                    <div class="calendar-header">
+                        <button id="prevMonth" class="calendar-nav-btn"><i class="fas fa-chevron-left"></i></button>
+                        <h3 id="currentMonth">September 2023</h3>
+                        <button id="nextMonth" class="calendar-nav-btn"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    
+                    <div class="calendar-grid">
+                        <div class="calendar-days">
+                            <span>Sun</span>
+                            <span>Mon</span>
+                            <span>Tue</span>
+                            <span>Wed</span>
+                            <span>Thu</span>
+                            <span>Fri</span>
+                            <span>Sat</span>
+                        </div>
+                        <div id="calendarDates" class="calendar-dates">
+                            <!-- Dates will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="upcoming-events">
+                    <h3>Upcoming Events</h3>
+                    <div id="eventsList" class="events-list">
+                        <!-- Events will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Online Doctors -->
+            <div class="online-doctors">
+                <h2>Online Doctors</h2>
+                <div class="doctors-list" id="doctorsList">
+                    <!-- Online doctors will be listed here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Support</h3>
+                <p>24/7 Helpline: 1-800-CARELINK</p>
+                <p>Email: support@carelink.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="social.js"></script>
+    <script src="calendar.js"></script>
+</body>
+</html> 

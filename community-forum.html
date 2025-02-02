@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareLink - Community Forum</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="image.png" alt="CareLink Logo">
+                <div class="site-name">CareLink</div>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#social" class="active">Social</a>
+                <a href="#services">Services</a>
+                <a href="#entertainment">Entertainment</a>
+            </div>
+            <button class="sos-button" id="sosButton">
+                <i class="fas fa-exclamation-circle"></i> SOS Emergency
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="community-section">
+            <h1><i class="fas fa-users"></i> Community Forum</h1>
+
+            <!-- Location Filter -->
+            <div class="location-filter">
+                <i class="fas fa-map-marker-alt"></i>
+                <select id="locationSelect">
+                    <option value="all">All Locations</option>
+                    <option value="nearby">Within 5 km</option>
+                    <option value="city">City-wide</option>
+                </select>
+                <button id="useLocation" class="location-btn">
+                    <i class="fas fa-crosshairs"></i> Use My Location
+                </button>
+            </div>
+
+            <!-- Event Categories -->
+            <div class="event-categories">
+                <button class="category-btn active" data-category="all">All Events</button>
+                <button class="category-btn" data-category="medical-camps">Medical Camps</button>
+                <button class="category-btn" data-category="health-checkup">Health Checkups</button>
+                <button class="category-btn" data-category="vaccination">Vaccination Drives</button>
+                <button class="category-btn" data-category="awareness">Health Awareness</button>
+            </div>
+
+            <!-- Create Post Button -->
+            <div class="create-post">
+                <button id="newPostBtn" class="primary-btn">
+                    <i class="fas fa-plus"></i> Share Event Information
+                </button>
+            </div>
+
+            <!-- Post Creation Form (Hidden by default) -->
+            <div id="postForm" class="post-form" style="display: none;">
+                <h3>Share Event Details</h3>
+                <form id="createPostForm">
+                    <div class="form-group">
+                        <label for="eventTitle">Event Title:</label>
+                        <input type="text" id="eventTitle" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventCategory">Category:</label>
+                        <select id="eventCategory" required>
+                            <option value="medical-camps">Medical Camp</option>
+                            <option value="health-checkup">Health Checkup</option>
+                            <option value="vaccination">Vaccination Drive</option>
+                            <option value="awareness">Health Awareness</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventDate">Date:</label>
+                        <input type="date" id="eventDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventLocation">Location:</label>
+                        <input type="text" id="eventLocation" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventDescription">Description:</label>
+                        <textarea id="eventDescription" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactInfo">Contact Information:</label>
+                        <input type="text" id="contactInfo" required>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn">Post Event</button>
+                        <button type="button" class="cancel-btn" id="cancelPost">Cancel</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Events List -->
+            <div class="events-list" id="eventsList">
+                <!-- Events will be added dynamically -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Support</h3>
+                <p>24/7 Helpline: 1-800-CARELINK</p>
+                <p>Email: support@carelink.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="community.js"></script>
+</body>
+</html> 

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareLink - Emergency Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="image.png" alt="CareLink Logo">
+                <div class="site-name">CareLink</div>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#health">Health</a>
+                <a href="#social">Social</a>
+                <a href="#services">Services</a>
+                <a href="#entertainment">Entertainment</a>
+            </div>
+            <button class="sos-button" id="sosButton">
+                <i class="fas fa-exclamation-circle"></i> SOS Emergency
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="emergency-section">
+            <h1><i class="fas fa-ambulance"></i> Emergency Services</h1>
+            
+            <div class="emergency-grid">
+                <!-- Ambulance Services -->
+                <div class="emergency-card">
+                    <div class="emergency-header ambulance">
+                        <i class="fas fa-ambulance"></i>
+                        <h2>Ambulance Services</h2>
+                    </div>
+                    <div class="emergency-contacts">
+                        <a href="tel:102" class="call-button">
+                            <i class="fas fa-phone"></i> 102 (Emergency Ambulance)
+                        </a>
+                        <a href="tel:108" class="call-button">
+                            <i class="fas fa-phone"></i> 108 (Medical Emergency)
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Police Services -->
+                <div class="emergency-card">
+                    <div class="emergency-header police">
+                        <i class="fas fa-shield-alt"></i>
+                        <h2>Police Services</h2>
+                    </div>
+                    <div class="emergency-contacts">
+                        <a href="tel:100" class="call-button">
+                            <i class="fas fa-phone"></i> 100 (Police Emergency)
+                        </a>
+                        <a href="tel:1091" class="call-button">
+                            <i class="fas fa-phone"></i> 1091 (Women's Helpline)
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Fire Services -->
+                <div class="emergency-card">
+                    <div class="emergency-header fire">
+                        <i class="fas fa-fire"></i>
+                        <h2>Fire Services</h2>
+                    </div>
+                    <div class="emergency-contacts">
+                        <a href="tel:101" class="call-button">
+                            <i class="fas fa-phone"></i> 101 (Fire Emergency)
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Nearby Hospitals -->
+                <div class="emergency-card">
+                    <div class="emergency-header hospital">
+                        <i class="fas fa-hospital"></i>
+                        <h2>Nearby Hospitals</h2>
+                    </div>
+                    <div class="emergency-contacts" id="nearbyHospitals">
+                        <!-- Hospitals will be populated based on location -->
+                        <div class="hospital-info">
+                            <h3>City Hospital</h3>
+                            <p><i class="fas fa-map-marker-alt"></i> 2.5 km away</p>
+                            <a href="tel:+1234567890" class="call-button">
+                                <i class="fas fa-phone"></i> Call Now
+                            </a>
+                            <button class="direction-button" onclick="getDirections('City Hospital')">
+                                <i class="fas fa-directions"></i> Get Directions
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Emergency Instructions -->
+            <div class="emergency-instructions">
+                <h2><i class="fas fa-info-circle"></i> Emergency Instructions</h2>
+                <ul>
+                    <li>Stay calm and speak clearly when calling emergency services</li>
+                    <li>Provide your exact location and landmarks</li>
+                    <li>Describe the emergency situation briefly</li>
+                    <li>Follow the dispatcher's instructions</li>
+                    <li>Keep your phone line free after calling</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Support</h3>
+                <p>24/7 Helpline: 1-800-CARELINK</p>
+                <p>Email: support@carelink.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="emergency.js"></script>
+</body>
+</html> 

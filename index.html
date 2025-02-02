@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareLink - Supporting Seniors' Independence</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Accessibility Controls -->
+    <div class="accessibility-controls">
+        <div class="font-size-control">
+            <label for="fontSizeSlider"><i class="fas fa-text-height"></i> Adjust Font Size</label>
+            <input type="range" id="fontSizeSlider" min="12" max="24" value="16" step="1">
+            <span id="fontSizeValue">16px</span>
+        </div>
+        <button id="contrastBtn">
+            <i class="fas fa-sun" id="sunIcon"></i>
+            <i class="fas fa-moon" id="moonIcon" style="display: none;"></i>
+        </button>
+        <select id="languageSelect">
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+        </select>
+    </div>
+
+    <!-- Header with Emergency Button -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="image.png" alt="CareLink Logo">
+                <div class="site-name">CareLink</div>
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#social">Social</a>
+                <a href="#services">Services</a>
+                <a href="#entertainment">Entertainment</a>
+            </div>
+            <button class="sos-button" id="sosButton">
+                <i class="fas fa-exclamation-circle"></i> SOS Emergency
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- User Dashboard -->
+        <section id="dashboard" class="dashboard-section">
+            <h1>Welcome, [User Name]</h1>
+            <div class="quick-actions">
+                <div class="action-card">
+                    <a href="medication.html" style="text-decoration: none; color: inherit;">
+                        <i class="fas fa-pills"></i>
+                        <h3>Medication Reminder</h3>
+                        <p>Next dose: 2:00 PM</p>
+                    </a>
+                </div>
+                <div class="action-card">
+                    <a href="appointments.html" style="text-decoration: none; color: inherit;">
+                        <i class="fas fa-calendar"></i>
+                        <h3>Upcoming Appointments</h3>
+                        <p>Dr. Smith - Tomorrow 10:00 AM</p>
+                    </a>
+                </div>
+                <div class="action-card">
+                    <a href="health.html" style="text-decoration: none; color: inherit;">
+                        <i class="fas fa-heart"></i>
+                        <h3>Health Stats</h3>
+                        <p>All measurements normal</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Features Grid -->
+        <section class="features-grid">
+            <!-- Safety & Emergency -->
+            <div class="feature-card">
+                <a href="emergency.html" style="text-decoration: none; color: inherit;">
+                    <h2><i class="fas fa-shield-alt"></i> Safety & Emergency</h2>
+                    <ul>
+                        <li>24/7 Emergency Support</li>
+                        <li>One-Click Emergency Calls</li>
+                        <li>Nearby Hospital Locator</li>
+                    </ul>
+                </a>
+            </div>
+
+            <!-- Social & Communication -->
+            <div class="feature-card">
+                <h2><i class="fas fa-users"></i> Social Connection</h2>
+                <ul>
+                    <li>Video Calls</li>
+                    <li><a href="community-forum.html" style="text-decoration: none; color: inherit;">Community Forums</a></li>
+                    <li><a href="special-calendar.html" style="text-decoration: none; color: inherit;">Special Days Calendar</a></li>
+                </ul>
+            </div>
+
+            <!-- Entertainment -->
+            <div class="feature-card">
+                <h2><i class="fas fa-gamepad"></i> Entertainment</h2>
+                <ul>
+                    <li><a href="music.html" style="text-decoration: none; color: inherit;">90's Music Collection</a></li>
+                    <li><a href="virtual-tour.html" style="text-decoration: none; color: inherit;">Virtual Tours</a></li>
+                    <li><a href="games.html" style="text-decoration: none; color: inherit;">Brain Games</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Support</h3>
+                <p>24/7 Helpline: 1-800-CARELINK</p>
+                <p>Email: support@carelink.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#about">About Us</a>
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+            </div>
+            <div class="footer-section">
+                <h3>Download Our App</h3>
+                <button class="app-button">App Store</button>
+                <button class="app-button">Google Play</button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</body>
+</html>

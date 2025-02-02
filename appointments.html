@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareLink - Appointments</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="image.png" alt="CareLink Logo">
+                <div class="site-name">CareLink</div>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#health">Health</a>
+                <a href="#social">Social</a>
+                <a href="#services">Services</a>
+                <a href="#entertainment">Entertainment</a>
+            </div>
+            <button class="sos-button" id="sosButton">
+                <i class="fas fa-exclamation-circle"></i> SOS Emergency
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="appointments-section">
+            <h1><i class="fas fa-calendar-alt"></i> Appointments Manager</h1>
+            
+            <div class="appointment-tabs">
+                <button class="tab-btn active" data-tab="enter-data">Enter Data</button>
+                <button class="tab-btn" data-tab="view-appointments">View Appointments</button>
+            </div>
+
+            <!-- Enter Data Tab -->
+            <div class="tab-content active" id="enter-data">
+                <form id="appointmentForm" class="appointment-form">
+                    <div class="form-group">
+                        <label for="appointmentDate">Date:</label>
+                        <input type="date" id="appointmentDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="appointmentTime">Time:</label>
+                        <input type="time" id="appointmentTime" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="doctorName">Doctor's Name:</label>
+                        <input type="text" id="doctorName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hospitalName">Hospital/Clinic Name:</label>
+                        <input type="text" id="hospitalName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="appointmentNotes">Additional Notes:</label>
+                        <textarea id="appointmentNotes" rows="3"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Schedule Appointment</button>
+                </form>
+            </div>
+
+            <!-- View Appointments Tab -->
+            <div class="tab-content" id="view-appointments">
+                <div class="appointments-list">
+                    <h2>Upcoming Appointments</h2>
+                    <div id="appointmentsList">
+                        <!-- Appointments will be displayed here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Support</h3>
+                <p>24/7 Helpline: 1-800-CARELINK</p>
+                <p>Email: support@carelink.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="appointments.js"></script>
+</body>
+</html> 

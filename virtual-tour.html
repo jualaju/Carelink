@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareLink - Virtual Tours</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="image.png" alt="CareLink Logo">
+                <div class="site-name">CareLink</div>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#health">Health</a>
+                <a href="#social">Social</a>
+                <a href="#services">Services</a>
+                <a href="#entertainment" class="active">Entertainment</a>
+            </div>
+            <button class="sos-button" id="sosButton">
+                <i class="fas fa-exclamation-circle"></i> SOS Emergency
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="virtual-tour-section">
+            <h1><i class="fas fa-globe-americas"></i> Virtual Tours</h1>
+
+            <!-- Tour Categories -->
+            <div class="tour-categories">
+                <button class="category-btn active" data-category="all">All Places</button>
+                <button class="category-btn" data-category="temples">Temples</button>
+                <button class="category-btn" data-category="nature">Nature</button>
+                <button class="category-btn" data-category="monuments">Monuments</button>
+                <button class="category-btn" data-category="museums">Museums</button>
+            </div>
+
+            <!-- Featured Tour -->
+            <div class="featured-tour">
+                <h2>Featured Tour</h2>
+                <div class="video-player-large">
+                    <iframe id="featuredVideo" width="100%" height="500" 
+                            src="https://www.youtube.com/embed/HrYBj0kWgdg" 
+                            title="Virtual Tour" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="tour-info">
+                    <h3 id="featuredTitle">Taj Mahal, Agra</h3>
+                    <p id="featuredDescription">Experience the majestic beauty of the Taj Mahal, one of the world's most iconic monuments.</p>
+                </div>
+            </div>
+
+            <!-- Tour Grid -->
+            <div class="tour-grid" id="tourGrid">
+                <!-- Tour cards will be added dynamically -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Support</h3>
+                <p>24/7 Helpline: 1-800-CARELINK</p>
+                <p>Email: support@carelink.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="virtual-tour.js"></script>
+</body>
+</html> 

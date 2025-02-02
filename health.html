@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareLink - Health Status</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Chart.js for graphs -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="image.png" alt="CareLink Logo">
+                <div class="site-name">CareLink</div>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#health">Health</a>
+                <a href="#social">Social</a>
+                <a href="#services">Services</a>
+                <a href="#entertainment">Entertainment</a>
+            </div>
+            <button class="sos-button" id="sosButton">
+                <i class="fas fa-exclamation-circle"></i> SOS Emergency
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="health-section">
+            <h1><i class="fas fa-heartbeat"></i> Health Status Tracker</h1>
+            
+            <div class="health-tabs">
+                <button class="tab-btn active" data-tab="enter-metrics">Enter Metrics</button>
+                <button class="tab-btn" data-tab="view-trends">View Trends</button>
+            </div>
+
+            <!-- Enter Metrics Tab -->
+            <div class="tab-content active" id="enter-metrics">
+                <form id="healthForm" class="health-form">
+                    <div class="metrics-grid">
+                        <div class="form-group">
+                            <label for="bp">Blood Pressure (mmHg):</label>
+                            <div class="bp-inputs">
+                                <input type="number" id="bpSystolic" placeholder="Systolic" required>
+                                <span>/</span>
+                                <input type="number" id="bpDiastolic" placeholder="Diastolic" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="glucose">Blood Glucose (mg/dL):</label>
+                            <input type="number" id="glucose" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cholesterol">Cholesterol (mg/dL):</label>
+                            <input type="number" id="cholesterol" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="heartRate">Heart Rate (BPM):</label>
+                            <input type="number" id="heartRate" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="weight">Weight (kg):</label>
+                            <input type="number" id="weight" step="0.1" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="height">Height (cm):</label>
+                            <input type="number" id="height" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="measurementDate">Date:</label>
+                        <input type="datetime-local" id="measurementDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes">Notes:</label>
+                        <textarea id="notes" rows="3"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Save Measurements</button>
+                </form>
+            </div>
+
+            <!-- View Trends Tab -->
+            <div class="tab-content" id="view-trends">
+                <div class="trends-grid">
+                    <div class="chart-container">
+                        <h3>Blood Pressure Trends</h3>
+                        <canvas id="bpChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Blood Glucose Trends</h3>
+                        <canvas id="glucoseChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Cholesterol Trends</h3>
+                        <canvas id="cholesterolChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Heart Rate Trends</h3>
+                        <canvas id="heartRateChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Weight Trends</h3>
+                        <canvas id="weightChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3>BMI Trends</h3>
+                        <canvas id="bmiChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Support</h3>
+                <p>24/7 Helpline: 1-800-CARELINK</p>
+                <p>Email: support@carelink.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="health.js"></script>
+</body>
+</html> 

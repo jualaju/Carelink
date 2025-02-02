@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareLink - Brain Games</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="image.png" alt="CareLink Logo">
+                <div class="site-name">CareLink</div>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#health">Health</a>
+                <a href="#social">Social</a>
+                <a href="#services">Services</a>
+                <a href="#entertainment" class="active">Entertainment</a>
+            </div>
+            <button class="sos-button" id="sosButton">
+                <i class="fas fa-exclamation-circle"></i> SOS Emergency
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="games-section">
+            <h1><i class="fas fa-gamepad"></i> Brain Games</h1>
+            
+            <div class="games-categories">
+                <button class="category-btn active" data-category="all">All Games</button>
+                <button class="category-btn" data-category="memory">Memory</button>
+                <button class="category-btn" data-category="puzzle">Puzzle</button>
+                <button class="category-btn" data-category="math">Math</button>
+                <button class="category-btn" data-category="word">Word Games</button>
+            </div>
+
+            <div class="games-grid" id="gamesGrid">
+                <!-- Memory Game -->
+                <div class="game-card" data-category="memory">
+                    <div class="game-thumbnail">
+                        <img src="images/memory-match.jpg" alt="Memory Match">
+                        <div class="play-overlay">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Memory Match</h3>
+                        <p>Match pairs of cards to improve memory and concentration</p>
+                        <button class="play-btn" onclick="startGame('memory-match')">Play Now</button>
+                    </div>
+                </div>
+
+                <!-- Word Search -->
+                <div class="game-card" data-category="word">
+                    <div class="game-thumbnail">
+                        <img src="images/word-search.jpg" alt="Word Search">
+                        <div class="play-overlay">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Word Search</h3>
+                        <p>Find hidden words to enhance vocabulary and attention</p>
+                        <button class="play-btn" onclick="startGame('word-search')">Play Now</button>
+                    </div>
+                </div>
+
+                <!-- Number Puzzle -->
+                <div class="game-card" data-category="puzzle">
+                    <div class="game-thumbnail">
+                        <img src="images/number-puzzle.jpg" alt="Number Puzzle">
+                        <div class="play-overlay">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Number Puzzle</h3>
+                        <p>Arrange numbers in order to boost logical thinking</p>
+                        <button class="play-btn" onclick="startGame('number-puzzle')">Play Now</button>
+                    </div>
+                </div>
+
+                <!-- Math Challenge -->
+                <div class="game-card" data-category="math">
+                    <div class="game-thumbnail">
+                        <img src="images/math-game.jpg" alt="Math Challenge">
+                        <div class="play-overlay">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Math Challenge</h3>
+                        <p>Simple math exercises to keep the mind sharp</p>
+                        <button class="play-btn" onclick="startGame('math-challenge')">Play Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game Modal -->
+            <div id="gameModal" class="game-modal">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <h2 id="modalTitle">Game Title</h2>
+                    <div id="gameContainer"></div>
+                    <div class="game-controls">
+                        <button id="restartGame">Restart</button>
+                        <span id="gameScore">Score: 0</span>
+                        <span id="gameTimer">Time: 0:00</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Support</h3>
+                <p>24/7 Helpline: 1-800-CARELINK</p>
+                <p>Email: support@carelink.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="games.js"></script>
+</body>
+</html> 

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareLink - Special Days Calendar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="image.png" alt="CareLink Logo">
+                <div class="site-name">CareLink</div>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#social" class="active">Social</a>
+                <a href="#services">Services</a>
+                <a href="#entertainment">Entertainment</a>
+            </div>
+            <button class="sos-button" id="sosButton">
+                <i class="fas fa-exclamation-circle"></i> SOS Emergency
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="special-calendar-section">
+            <h1><i class="fas fa-calendar-alt"></i> Special Days Calendar</h1>
+
+            <!-- Calendar Navigation -->
+            <div class="calendar-navigation">
+                <button id="prevMonth" class="nav-btn"><i class="fas fa-chevron-left"></i></button>
+                <h2 id="currentMonth">February 2024</h2>
+                <button id="nextMonth" class="nav-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+
+            <!-- Calendar View -->
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <span>Sun</span>
+                    <span>Mon</span>
+                    <span>Tue</span>
+                    <span>Wed</span>
+                    <span>Thu</span>
+                    <span>Fri</span>
+                    <span>Sat</span>
+                </div>
+                <div id="calendarDays" class="calendar-days">
+                    <!-- Days will be added dynamically -->
+                </div>
+            </div>
+
+            <!-- Upcoming Special Days -->
+            <div class="upcoming-events">
+                <h2>Upcoming Special Days</h2>
+                <div id="upcomingList" class="upcoming-list">
+                    <!-- Upcoming events will be added dynamically -->
+                </div>
+            </div>
+
+            <!-- Event Details Modal -->
+            <div id="eventModal" class="event-modal">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <h2 id="modalTitle"></h2>
+                    <div id="modalContent">
+                        <p id="modalDescription"></p>
+                        <div id="modalActivities"></div>
+                        <div id="modalResources"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Categories -->
+            <div class="event-categories">
+                <button class="category-btn active" data-category="all">All Events</button>
+                <button class="category-btn" data-category="international">International Days</button>
+                <button class="category-btn" data-category="national">National Days</button>
+                <button class="category-btn" data-category="medical">Medical Events</button>
+                <button class="category-btn" data-category="elderly">Elderly Care</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Support</h3>
+                <p>24/7 Helpline: 1-800-CARELINK</p>
+                <p>Email: support@carelink.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="special-calendar.js"></script>
+</body>
+</html> 
