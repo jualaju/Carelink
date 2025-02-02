@@ -22,7 +22,7 @@ A simple, user-friendly elderly assessment website is needed to help seniors wit
 
 
 ### The Solution
-[How are you solving it? Keep it fun!]
+The elderly assessment website will offer a simple and accessible platform to help seniors with health tracking, medication reminders, emergency contacts, and daily task management. It will also provide easy communication with family, caregivers, and support services to reduce isolation and improve well-being. This solution ensures seniors can live safely and independently, while caregivers can stay informed and provide better assistance.
 
 ## Technical Details
 ### Technologies/Components Used
@@ -52,45 +52,21 @@ npm start
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+![image](https://github.com/user-attachments/assets/6ba0184d-666d-4528-94a2-a23b95cbd4ed)
+Cover Page
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+![image](https://github.com/user-attachments/assets/b52f7a2d-0299-452a-a6b5-518601aa1b53)
+Emergency Services
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
-
-# Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
-
-For Hardware:
-
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
+![image](https://github.com/user-attachments/assets/3ea72691-013d-4a96-b758-b7bd6f856be5)
+Appointment reminder
 
 # Build Photos
-![Team](Add photo of your team here)
-
-
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
+![IMG-20250202-WA0001](https://github.com/user-attachments/assets/285a41a6-1957-4a13-b0bc-1e461793751a)
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- Jual: css
+- Flemi: html 
 
 ---
 Made with ❤️ at TinkerHub
