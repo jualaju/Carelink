@@ -13,7 +13,7 @@
 [mention your project hosted project link here]
 
 ### Project Description
-[2-3 lines about what your project does]
+[]
 
 ### The Problem statement
 [What ridiculous problem are you solving?]
@@ -24,15 +24,10 @@
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
-- [Frameworks used]
+- [HTML,JavaScript]
+- [Framew]
 - [Libraries used]
-- [Tools used]
-
-For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
+- [Toolsused]
 
 ### Implementation
 For Software:
